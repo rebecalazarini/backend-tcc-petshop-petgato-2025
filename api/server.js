@@ -7,15 +7,14 @@ const routes = require('../src/routes');
 
 const prisma = new PrismaClient();
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
 app.use(express.json()); 
 app.use('/', routes);
 
-app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
+app.listen(3000, () => {
+    console.log(`Servidor rodando em http://localhost:3000`);
 });
 
 
