@@ -1,6 +1,5 @@
 const express = require('express');
 const routes = express.Router();
-const SECRET_KEY = process.env.SECRET_KEY || 'meu_segredo_jwt';
 
 const User = require('./controllers/user.js');
 const Consulta = require('./controllers/consulta.js');
