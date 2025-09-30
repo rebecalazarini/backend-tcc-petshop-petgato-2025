@@ -80,7 +80,7 @@ vercel
 ```
 - Teste com o link: https://back-end-tcc-gamma.vercel.app/
 
-## Meodologia
+## Metodologia
 - Metodologia: KANBAN
 - Papéis e responsabilidades: Rebeca Lazarini: back-end, Larissa Santos: front-end, Evelyn Fernandes: Banco de dados, Larissa Rocha: Testes/relatórios e Crislaine Leopoldo: Documentação.
 - O objetivo do nosso site de pet shop é oferecer uma experiência online de fácil acesso e navegação, com uma interface intuitiva e dinâmica. As telas serão funcionais e bem organizadas, permitindo que os clientes encontrem rapidamente os produtos e serviços que procuram, além de possibilitar um processo de compra simples e eficiente.
