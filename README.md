@@ -114,7 +114,7 @@ vercel
   - RNF06: O sistema deve ser capaz de suportar um aumento de 100% no volume de pedidos durante períodos promocionais (ex: Black Friday) sem degradação do desempenho.
 - Tecnológicos
   - RNF7: O sistema deve ser compatível com os navegadores web mais recentes (Chrome, Firefox, Safari e Edge).
-  - 	RNF8: O site deve integrar-se com o serviço de API do Correios para cálculo de frete. Ou ter um frete fixo pra todas as compras.
+  - RNF8: O site deve integrar-se com o serviço de API do Correios para cálculo de frete. Ou ter um frete fixo pra todas as compras.
 
 
 
