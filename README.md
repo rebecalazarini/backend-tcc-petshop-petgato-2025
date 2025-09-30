@@ -9,29 +9,24 @@
 - JavaScript
 - Mysql
 
-  ## Como executar no VsCode
+  ## Como executar localmente
 - Clone este repositório
 - Abra com VsCode
-- Abra o terminal ctrl + '
-- Execute esse comando
-```bash
-cd back-end
-cd api
-```
-- Crie o arquivo . env dentro da pasta api com a seguintes variaveis de ambiente:
+- Crie o arquivo .env na raiz do projeto com a seguintes variaveis de ambiente:
 ````bash
 SECRET_JWT=meu_segredo_jwt
 DATABASE_URL="mysql://root@localhost:3306/fullpetgato?timezone=UTC"
 ````
 - Caso ja exista, exclua o arquivo .env e crie um
-  
-- Instale as dependencias nessa ordem
 - Caso tenha a pasta migrations em prisma/migrations exclua ela e execute as dependencias
-- Não esqueça que se tiver um banco de dados com o nome cadastro em seu mysql é importante excluir para poder funcionar as depndencias
+- Não esqueça que se tiver um banco de dados com o nome fullpetgato em seu mysql é importante excluir para poder funcionar as dependencias
+- Abra o terminal ctrl + '
+- Instale as dependencias nessa ordem
 ```bash
-npm i
+npm install
+npx prisma generate
 npx prisma migrate dev --name init
-npx nodemon server.js
+npm run dev
 
 ```
 
@@ -67,21 +62,3 @@ npx nodemon server.js
 - Metodologia: KANBAN
 - Papéis e responsabilidades: Rebeca Lazarini: back-end, Larissa Santos: front-end, Evelyn Fernandes: Banco de dados, Larissa Rocha: Testes/relatórios e Crislaine Leopoldo: Documentação.
 - O objetivo do nosso site de pet shop é oferecer uma experiência online de fácil acesso e navegação, com uma interface intuitiva e dinâmica. As telas serão funcionais e bem organizadas, permitindo que os clientes encontrem rapidamente os produtos e serviços que procuram, além de possibilitar um processo de compra simples e eficiente.
-
-
-|PetGatô Swot (fofa)|
-|:-:|
-|![Matriz](fofapetshop.png)|
-
-|Exemplo PetShop Tiangulo de ferro|
-|:-:|
-|![triangulo](petshoptriangulo.png)|
-
-|DC|
-|:-:|
-|![dc](./assets/dc(uml).png)|
-
-|Diagrama de atividadas|
-|:-:|
-|![dc](./assets/diagramaatividades.png)|
-
