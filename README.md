@@ -20,6 +20,13 @@ DATABASE_URL="mysql://root@localhost:3306/fullpetgato?timezone=UTC"
 - Caso ja exista, exclua o arquivo .env e crie um
 - Caso tenha a pasta migrations em prisma/migrations exclua ela e execute as dependencias
 - Não esqueça que se tiver um banco de dados com o nome fullpetgato em seu mysql é importante excluir para poder funcionar as dependencias
+- Troque o postgresl so prisma pra mysql 
+```bash
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+```
 - Abra o terminal ctrl + '
 - Instale as dependencias nessa ordem
 ```bash
@@ -27,10 +34,9 @@ npm install
 npx prisma generate
 npx prisma migrate dev --name init
 npm run dev
-
 ```
 
-## Teste no insomnia 
+## Teste no insomnia localmente
 - Você pode testar tanto no insomnia quanto na própria tela de cadastro e consulta no fron-end
 - Users
 ```bash
@@ -57,6 +63,22 @@ npm run dev
 "alergia": "Nenhuma"
 }
 ```
+
+## Testar na vercel
+- Troque o nome mysql do prisma pra postgresql
+```bash
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+```
+- Instale as dependencias
+```bash
+npm i -g vercel@latest
+vercel link
+vercel
+```
+- Teste com o link: https://back-end-tcc-gamma.vercel.app/
 
 ## Meodologia
 - Metodologia: KANBAN
