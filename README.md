@@ -80,6 +80,11 @@ vercel
 ```
 - Teste com o link: https://back-end-tcc-gamma.vercel.app/
 
+## Documentação
+![matriz_swot](./docs/fofapetshop.png)
+[Relatorio_Caixa_Preta](./docs/caixa_preta_back-end.pdf)
+[Relatorio_Caixa_Branca](./docs/Relatório%20Back-end.pdf)
+
 ## Metodologia
 - Metodologia: KANBAN
 - Papéis e responsabilidades: Rebeca Lazarini: back-end, Larissa Santos: front-end, Evelyn Fernandes: Banco de dados, Larissa Rocha: Testes/relatórios e Crislaine Leopoldo: Documentação.
