@@ -5,6 +5,7 @@ const User = require('./controllers/user.js');
 const Consulta = require('./controllers/consulta.js');
 const Login = require('./controllers/login.js');
 const auth = require('./middleware/auth.js');
+const Produtos = require('./controllers/produtos.js');
 
 routes.get('/', (req, res) => {
     const api = {
@@ -29,7 +30,13 @@ routes.get('/', (req, res) => {
             { metodo: 'GET', caminho: '/consultas' },
             { metodo: 'POST', caminho: '/consultas' },
             { metodo: 'PATCH', caminho: '/consultas/:id' },
-            { metodo: 'DELETE', caminho: '/consultas/:id' }
+            { metodo: 'DELETE', caminho: '/consultas/:id' },
+
+            { metodo: 'GET', caminho: '/produtos' },
+            { metodo: 'GET', caminho: '/produtos/:id' },
+            { metodo: 'POST', caminho: '/produtos' },
+            { metodo: 'PATCH', caminho: '/produtos/:id' },
+            { metodo: 'DELETE', caminho: '/produtos/:id' }
         ]
     }
     res.json(api);
@@ -54,5 +61,11 @@ routes.post('/consultas', Consulta.create);
 routes.get('/consultas', Consulta.read);
 routes.patch('/consultas/:id', Consulta.update);
 routes.delete('/consultas/:id', Consulta.remove);
+
+routes.post('/produtos', Produtos.create);
+routes.get('/produtos', Produtos.read);
+routes.get('/produtos/:id', Produtos.readById);
+routes.patch('/produtos/:id', Produtos.update);
+routes.delete('/produtos/:id', Produtos.remove);
 
 module.exports = routes;
