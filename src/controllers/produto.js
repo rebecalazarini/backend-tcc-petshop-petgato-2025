@@ -20,10 +20,10 @@ const create = async (req, res) => {
 
 const read = async (req, res) => {
     try {
-        const produtos = await prisma.produto.findMany();
-        res.status(200).json(produtos);
+        const produto = await prisma.produto.findMany();
+        res.status(200).json(produto);
     } catch (error) {
-        res.status(500).json({ error: 'Erro ao buscar produtos' });
+        res.status(500).json({ error: 'Erro ao buscar produto' });
     }
 };
 
