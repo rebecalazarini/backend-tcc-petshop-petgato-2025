@@ -77,6 +77,7 @@ datasource db {
 npm i -g vercel@latest
 vercel link
 vercel
+vercel --prod
 ```
 - Teste com o link: https://back-end-tcc-gamma.vercel.app/
 
