@@ -47,8 +47,6 @@ async function buscarProdutos() {
         { id: 2, nome: 'Produto 2', especie: 'Espécie 2', raca: 'Raça 2', dados: 'Dados do produto 2', categoria: 'gato' },
     ];
 }
-
-// Função que vai ser chamada pela rota /produtos para retornar os produtos
 exports.listarProdutos = async (req, res) => {
     try {
         const produtos = await buscarProdutos(); // Aqui você chama a função de buscar os produtos
