@@ -4,7 +4,6 @@ const prisma = new PrismaClient();
 const create = async (req, res) => {
     try {
         const { nome, descricao, preco, imagem, categoria } = req.body;
-        
         // Verificar se a categoria enviada é válida
         const categoriasValidas = ['cachorro', 'gato', 'outros', 'farmacia'];
         if (!categoriasValidas.includes(categoria)) {
