@@ -20,12 +20,28 @@ DATABASE_URL="mysql://root@localhost:3306/fullpetgato?timezone=UTC"
 - Caso ja exista, exclua o arquivo .env e crie um
 - Caso tenha a pasta migrations em prisma/migrations exclua ela e execute as dependencias
 - Não esqueça que se tiver um banco de dados com o nome fullpetgato em seu mysql é importante excluir para poder funcionar as dependencias
-- Troque o postgresl so prisma pra mysql 
+- Troque o postgresl do prisma pra mysql 
 ```bash
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+```
+- Adicionar no server.js
+```bash
+const express = require('express');
+const cors = require('cors');
+const routes = require('../src/routes');
+
+const port = process.env.PORT || 3001;
+const app = express();
+app.use(express.json());
+app.use(cors());
+app.use(routes);
+
+app.listen(port, (req, res) => {
+    console.log('API respondendo em http://localhost:' + port)
+});
 ```
 - Abra o terminal ctrl + '
 - Instale as dependencias nessa ordem
@@ -35,7 +51,6 @@ npx prisma generate
 npx prisma migrate dev --name init
 npm run dev
 ```
-
 ## Teste no insomnia localmente
 - Você pode testar tanto no insomnia quanto na própria tela de cadastro e consulta no fron-end
 - Users
