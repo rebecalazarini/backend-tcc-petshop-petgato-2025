@@ -1,15 +1,14 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
-const express = require('express');
-const cors = require('cors');
 
 const create = async (req, res) => {
     try {
         const { nome, descricao, preco, imagem, categoria } = req.body;
+        // Verificar se a categoria enviada é válida
         const categoriasValidas = ['cachorro', 'gato', 'outros', 'farmacia'];
-        if (!categoriasValidas.includes(categoria)) {
-            return res.status(400).json({ error: 'Categoria inválida.' });
-        }
+        //if (!categoriasValidas.includes(categoria)) {
+          //  return res.status(400).json({ error: 'Categoria inválida.' });
+        //}
 
         const produto = await prisma.produto.create({
             data: {
@@ -17,13 +16,14 @@ const create = async (req, res) => {
                 descricao,
                 preco,
                 imagem,
-                categoria, 
+                categoria,
             },
         });
 
         res.status(201).json(produto);
     } catch (error) {
-        res.status(500).json({ error: 'Erro ao criar produto' });
+    console.error(error);  
+    res.status(500).json({ mensage: 'Erro ao criar produto' });
     }
 };
 
@@ -39,16 +39,18 @@ const read = async (req, res) => {
     }
 };
 
+// Supondo que você tenha uma função de buscar produtos no banco de dados:
 async function buscarProdutos() {
+    // Simulando a busca no banco de dados
     return [
-        { id: 1, nome: 'Produto 1', especie: 'Espécie 1', categoria: 'cachorro' },
+        { id: 1, nome: 'Produto 1', especie: 'Espécie 1', raca: 'Raça 1', dados: 'Dados do produto 1', categoria: 'cachorro' },
         { id: 2, nome: 'Produto 2', especie: 'Espécie 2', raca: 'Raça 2', dados: 'Dados do produto 2', categoria: 'gato' },
     ];
 }
 exports.listarProdutos = async (req, res) => {
     try {
-        const produtos = await buscarProdutos();
-        res.json(produtos); 
+        const produtos = await buscarProdutos(); // Aqui você chama a função de buscar os produtos
+        res.json(produtos);  // Retorna os produtos em formato JSON
     } catch (error) {
         res.status(500).json({ error: 'Erro ao buscar produtos' });
     }
@@ -75,6 +77,8 @@ const update = async (req, res) => {
     try {
         const { id } = req.params;
         const { nome, descricao, preco, imagem, categoria } = req.body;
+
+        // Verificar se a categoria enviada é válida
         const categoriasValidas = ['cachorro', 'gato', 'outros', 'farmacia'];
         if (!categoriasValidas.includes(categoria)) {
             return res.status(400).json({ error: 'Categoria inválida.' });
@@ -87,7 +91,7 @@ const update = async (req, res) => {
                 descricao,
                 preco,
                 imagem,
-                categoria,
+                categoria, // Atualizando a categoria com um valor válido
             },
         });
 
