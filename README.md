@@ -39,7 +39,7 @@ npm run dev
 - Você pode testar tanto no insomnia quanto na própria tela de cadastro e consulta no fron-end
 - Users
 ```bash
- http://localhost:3000/usuarios
+ http://localhost:3001/usuarios
  exemplo:
 {
   "email": "teste@exemplo.com",
@@ -49,7 +49,7 @@ npm run dev
 
 - Cadastro do Pet
 ```bash
- http://localhost:3000/consultas
+ http://localhost:3001/consultas
  exemplo:
 {
 "id": 1,
@@ -79,7 +79,7 @@ vercel env pull .env
 vercel
 vercel --prod
 ```
-- Teste com o link: https://back-end-tcc-gamma.vercel.app/
+- Teste com o link: https://backend-tcc-petshop-petgato-2025.vercel.app/
 
 ## Documentação
 ![matriz_swot](./docs/fofapetshop.png)
