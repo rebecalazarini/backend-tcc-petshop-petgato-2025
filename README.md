@@ -80,6 +80,7 @@ vercel
 vercel --prod
 ```
 - Teste com o link: https://backend-tcc-petshop-petgato-2025.vercel.app/
+- [Importação do insomnia](./docs/Insomnia_2025-10-29.yaml)
 
 ## Documentação
 ![matriz_swot](./docs/fofapetshop.png)
