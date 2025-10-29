@@ -1,0 +1,1102 @@
+type: collection.insomnia.rest/5.0
+name: tcc
+meta:
+  id: wrk_e78dee595d41460d961cc5c19789bab5
+  created: 1746555930685
+  modified: 1747220043031
+  description: ""
+collection:
+  - name: Local
+    meta:
+      id: fld_9c7b7a3cfd2848a8b029658e644cf857
+      created: 1758657064280
+      modified: 1758657064280
+      sortKey: -1758657064280
+      description: ""
+    children:
+      - url: http://localhost:3001
+        name: TESTE
+        meta:
+          id: req_1d1ce882ae01488896c23eba26a2b054
+          created: 1758656115782
+          modified: 1761757077714
+          isPrivate: false
+          description: ""
+          sortKey: -1758657067542
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - name: consulta pet
+        meta:
+          id: fld_5e2d82a468ed423fb3a0dd1de82c10bc
+          created: 1747220051074
+          modified: 1758657072367
+          sortKey: -1758657067342
+          description: ""
+        children:
+          - url: http://localhost:3001/consultas/1
+            name: delete pet
+            meta:
+              id: req_3282423331ab4f2da2c86c4078f1a142
+              created: 1746555954126
+              modified: 1761757039253
+              isPrivate: false
+              description: ""
+              sortKey: -1747220057272
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/consultas/3
+            name: update pet
+            meta:
+              id: req_57a267ae1ec14e76816364700e9236fb
+              created: 1746555955469
+              modified: 1761757035218
+              isPrivate: false
+              description: ""
+              sortKey: -1747220057172
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                			"id": 3,
+                		"nomePet": "king-Kong",
+                		"especiePet": "cachorro",
+                		"racaPet": "Labrador mestiço",
+                		"nomeProprietario": "Steffany",
+                		"nascpet": "2017-10-27T00:00:00.000Z",
+                		"emailProprietario": "steffany@gmail.com",
+                		"dados": "Não, até onde eu sei"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/consultas
+            name: read pet
+            meta:
+              id: req_d0a3641843f940b880eff1b76fbcdbc2
+              created: 1746555956701
+              modified: 1761740780254
+              isPrivate: false
+              description: ""
+              sortKey: -1747220057072
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/consultas
+            name: create pet
+            meta:
+              id: req_fba89805e4e34c63b4a3631467935687
+              created: 1746555964960
+              modified: 1761757027162
+              isPrivate: false
+              description: ""
+              sortKey: -1747220056972
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                		"nomePet": "Mel",
+                		"especiePet": "cachorro",
+                		"racaPet": "srd",
+                		"nomeProprietario": "Evelyn",
+                		"nascpet": "2021-12-13T00:00:00.000Z",
+                		"emailProprietario": "lyne@gmail.com",
+                		"dados": "nao"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: cadastro cliente
+        meta:
+          id: fld_664e16b65be34c4b9c736dfd03654f94
+          created: 1747220301880
+          modified: 1758657070750
+          sortKey: -1758657067242
+          description: ""
+        children:
+          - url: http://localhost:3001/cadastro
+            name: read
+            meta:
+              id: req_c54ecbbe39c641a8b86689ab3f1242cd
+              created: 1747220308476
+              modified: 1761757003953
+              isPrivate: false
+              description: ""
+              sortKey: -1747220308476
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/cadastro
+            name: create
+            meta:
+              id: req_03337940435f4df98bb08780febdd475
+              created: 1747220309549
+              modified: 1761757009973
+              isPrivate: false
+              description: ""
+              sortKey: -1747220309549
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"id": 1,
+                		"email": "rebeca1@gmail.com",
+                		"senha": "123345"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/cadastro/7
+            name: patch
+            meta:
+              id: req_1222a5ace865451a98bd2f35440e75c4
+              created: 1756896732271
+              modified: 1761757014781
+              isPrivate: false
+              description: ""
+              sortKey: -1756896732271
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"id": 7,
+                		"email": "teste3@gmail.com"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.5.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/cadastro/6
+            name: delete
+            meta:
+              id: req_8175344f4c604117b772bd2b55b9bab4
+              created: 1756896744420
+              modified: 1761757018891
+              isPrivate: false
+              description: ""
+              sortKey: -1756896744420
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.5.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: login
+        meta:
+          id: fld_babc312721b44a3c91265d5d84ee80ef
+          created: 1756299500399
+          modified: 1758657073971
+          sortKey: -1758657067442
+          description: ""
+        children:
+          - url: http://localhost:3001/usuarios/8
+            name: delete
+            meta:
+              id: req_b29c103eacd54b57be1475b9888ddd77
+              created: 1756299504974
+              modified: 1761757046196
+              isPrivate: false
+              description: ""
+              sortKey: -1756299504974
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoidGVzdGUyMGFAZ21haWwuY29tIiwiaWF0IjoxNzU4NjQ4MTg4LCJleHAiOjE3NTg2NDk5ODh9.4o6BkuXBl0s6bbtnYkuab82FA3lvq48xZLe0-rr-nPg
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/usuarios/21
+            name: patch
+            meta:
+              id: req_583c196afd6547839fe4c3e71a4e030a
+              created: 1756299508240
+              modified: 1761757054500
+              isPrivate: false
+              description: ""
+              sortKey: -1756299508240
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |
+                
+                	{
+                		"id": 21,
+                		"email": "steffany@gmail.com"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoidGVzdGUyMGFAZ21haWwuY29tIiwiaWF0IjoxNzU4NjQ4MTg4LCJleHAiOjE3NTg2NDk5ODh9.4o6BkuXBl0s6bbtnYkuab82FA3lvq48xZLe0-rr-nPg
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/login
+            name: post do token
+            meta:
+              id: req_3188c9692a184d5c972b3041ab7a7a13
+              created: 1756299509771
+              modified: 1761757061520
+              isPrivate: false
+              description: ""
+              sortKey: -1756299509771
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                		"email": "rebeca1@gmail.com",
+                		"senha": "123345"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoidGVzdGUyMGFAZ21haWwuY29tIiwiaWF0IjoxNzU4NjQ4MTg4LCJleHAiOjE3NTg2NDk5ODh9.4o6BkuXBl0s6bbtnYkuab82FA3lvq48xZLe0-rr-nPg
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/usuarios
+            name: read com senha criptografada
+            meta:
+              id: req_92c3cf1981ed4b85903c1c7228cca25e
+              created: 1756299511226
+              modified: 1761757066179
+              isPrivate: false
+              description: ""
+              sortKey: -1756299511226
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoidGVzdGUyMGFAZ21haWwuY29tIiwiaWF0IjoxNzU4NjQ5MTY5LCJleHAiOjE3NTg2NTA5Njl9.Ma996BL0e0k8aNpxgbdK4qzgIhA3fkrfnttGR2nNzhk
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/logado
+            name: post logado
+            meta:
+              id: req_9217d30d730d44b2a10ea29444b6a61f
+              created: 1757418820890
+              modified: 1761757070967
+              isPrivate: false
+              description: ""
+              sortKey: -1757418820890
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                			"email": "rebeca1@gmail.com",
+                		"senha": "123345"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyZWJlY2ExQGdtYWlsLmNvbSIsImlhdCI6MTc1OTMyMzg3OCwiZXhwIjoxNzU5MzI1Njc4fQ.Otn4sH-Au7BMbT8s1JZsmSTttjLNnanwAQ8NSg7BoM8
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Produtos
+        meta:
+          id: fld_bd6c43543a45447c9b60d3b3962eb524
+          created: 1759319530444
+          modified: 1759321780567
+          sortKey: -1759319530444
+          description: ""
+        children:
+          - url: http://localhost:3001/produto
+            name: read produtos
+            meta:
+              id: req_bcb7decaa536462c99cf091ad6598e8a
+              created: 1759319550704
+              modified: 1761757091452
+              isPrivate: false
+              description: ""
+              sortKey: -1759319550704
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/produto
+            name: create produtos
+            meta:
+              id: req_a8cc4435bdba49e8810aca19f0f6ceee
+              created: 1759319732956
+              modified: 1761757096664
+              isPrivate: false
+              description: ""
+              sortKey: -1759319732956
+            method: POST
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                		"nome": "Agulha pra vacina",
+                		"descricao": "agulha caseira",
+                		"preco": 25,
+                		"imagem": "https://th.bing.com/th/id/OIP.B5qBm8-IUUd6OwX4MmZW2wHaHa?w=156&h=180&c=7&r=0&o=7&cb=12&pid=1.7&rm=3",
+                		"categoria": "cachorro"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/produto/2
+            name: update produtos
+            meta:
+              id: req_3d7d2f0dca694e1a98b3fac2e5f0ad90
+              created: 1759321781954
+              modified: 1761757100172
+              isPrivate: false
+              description: ""
+              sortKey: -1759321781954
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                		"id": 2,
+                		"nome": "escova rosa",
+                		"descricao": "escova a vapor",
+                		"preco": 12.9,
+                		"imagem": "https://www.bing.com/th?id=OPHS.2%2b%2bbUp0qI8RqYw474C474&o=5&pid=21.1&w=160&h=228&qlt=100&dpr=1&o=2&c=8&pcl=f5f5f5",
+                	"categoria":"gato"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/produto/3
+            name: delete
+            meta:
+              id: req_7ef551a2513a44408aac29c3a25235c3
+              created: 1759321861151
+              modified: 1761757104465
+              isPrivate: false
+              description: ""
+              sortKey: -1759321861151
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3001/produtos/3
+            name: Buscar pelo id
+            meta:
+              id: req_accdc2fcc45a4b0aa1e797ceff5e25aa
+              created: 1759322208421
+              modified: 1761757108724
+              isPrivate: false
+              description: ""
+              sortKey: -1759322208421
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+  - name: Web Vercel
+    meta:
+      id: fld_28d153b6b5ac48fab6c87fc214cba817
+      created: 1758657093906
+      modified: 1758657100193
+      sortKey: -1758047194022
+      description: ""
+    children:
+      - url: https://back-end-tcc-gamma.vercel.app
+        name: TESTE
+        meta:
+          id: req_6ab1d1e2aa92417386afed5366297f97
+          created: 1758657093908
+          modified: 1758657104813
+          isPrivate: false
+          description: ""
+          sortKey: -1758657067542
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - name: consulta pet
+        meta:
+          id: fld_7bd61e90ba854260986fc25a2541c6af
+          created: 1758657093911
+          modified: 1758657093911
+          sortKey: -1758657067342
+          description: ""
+        children:
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/consultas/2
+            name: delete pet
+            meta:
+              id: req_f5b4bba96ce2466a848f7d6da59189ff
+              created: 1758657093913
+              modified: 1761766386612
+              isPrivate: false
+              description: ""
+              sortKey: -1747220057272
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/consultas/3
+            name: update pet
+            meta:
+              id: req_1788b4a221c947199fb00abc0d101ea5
+              created: 1758657093915
+              modified: 1761766379317
+              isPrivate: false
+              description: ""
+              sortKey: -1747220057172
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                			"id": 3,
+                		"nomePet": "king-Kong",
+                		"especiePet": "cachorro",
+                		"racaPet": "Labrador mestiço",
+                		"nomeProprietario": "Steffany",
+                		"nascpet": "2017-10-27T00:00:00.000Z",
+                		"emailProprietario": "steffany@gmail.com",
+                		"dados": "Não, até onde eu sei"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/consultas
+            name: read pet
+            meta:
+              id: req_a755bdf0895842cbaf87f93f5ba52db2
+              created: 1758657093916
+              modified: 1761766368444
+              isPrivate: false
+              description: ""
+              sortKey: -1747220057072
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/consultas
+            name: create pet
+            meta:
+              id: req_3ccbc5c370ec486e8168e9809920203b
+              created: 1758657093918
+              modified: 1761766236977
+              isPrivate: false
+              description: ""
+              sortKey: -1747220056972
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                		"nomePet": "Boga Responsivo",
+                		"especiePet": "cachorro",
+                		"racaPet": "shitzu",
+                		"nomeProprietario": "Larissa",
+                		"nascpet": "2021-12-13T00:00:00.000Z",
+                		"emailProprietario": "boga@gmail.com",
+                		"dados": "nao"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: cadastro cliente
+        meta:
+          id: fld_9594b6a2366b43daaed0a93baeb58333
+          created: 1758657093920
+          modified: 1758657093920
+          sortKey: -1758657067242
+          description: ""
+        children:
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/cadastro
+            name: read
+            meta:
+              id: req_4a6ad103355149e79e50235ac9414654
+              created: 1758657093922
+              modified: 1761766393070
+              isPrivate: false
+              description: ""
+              sortKey: -1747220308476
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/cadastro
+            name: create
+            meta:
+              id: req_7c632108ca084c4e81afcadafc233d87
+              created: 1758657093924
+              modified: 1761766399993
+              isPrivate: false
+              description: ""
+              sortKey: -1747220309549
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"email": "teste5@gmail.com",
+                		"senha": "12345678tyjhnh"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/cadastro/5
+            name: patch
+            meta:
+              id: req_6a16f98a6d2d46bcbb585382da60ccd1
+              created: 1758657093926
+              modified: 1761766404453
+              isPrivate: false
+              description: ""
+              sortKey: -1756896732271
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"id": 5,
+                		"email": "teste50@gmail.com"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.5.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/cadastro/14
+            name: delete
+            meta:
+              id: req_1e2b1450cd984fc99857a39b842f0834
+              created: 1758657093928
+              modified: 1761766412007
+              isPrivate: false
+              description: ""
+              sortKey: -1756896744420
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.5.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: login
+        meta:
+          id: fld_a3c98c56df4948adb029915d564c69c5
+          created: 1758657093930
+          modified: 1758657093930
+          sortKey: -1758657067442
+          description: ""
+        children:
+          - url: https://back-end-tcc-gamma.vercel.app/usuarios/3
+            name: delete
+            meta:
+              id: req_451d65dee95049aca3eb50d6b9deb70e
+              created: 1758657093932
+              modified: 1758657891555
+              isPrivate: false
+              description: ""
+              sortKey: -1756299504974
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ0ZXN0ZTUwQGdtYWlsLmNvbSIsImlhdCI6MTc1ODY1NzUwNSwiZXhwIjoxNzU4NjU5MzA1fQ.IiEV8dtLkp-Xjsp5mt5ES67j9OLTTpYI47Sdo0BBojc
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://back-end-tcc-gamma.vercel.app/usuarios/5
+            name: patch
+            meta:
+              id: req_3bed77e338244406b6073c8efa04f67e
+              created: 1758657093933
+              modified: 1758657849793
+              isPrivate: false
+              description: ""
+              sortKey: -1756299508240
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |
+                
+                	{ 
+                		"id":5,
+                			"email": "teste500@gmail.com"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ0ZXN0ZTUwQGdtYWlsLmNvbSIsImlhdCI6MTc1ODY1NzUwNSwiZXhwIjoxNzU4NjU5MzA1fQ.IiEV8dtLkp-Xjsp5mt5ES67j9OLTTpYI47Sdo0BBojc
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://back-end-tcc-gamma.vercel.app/login
+            name: post do token
+            meta:
+              id: req_e2545b86568841ba916963a45c04c0be
+              created: 1758657093935
+              modified: 1758657674696
+              isPrivate: false
+              description: ""
+              sortKey: -1756299509771
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                		
+                		"email": "teste50@gmail.com",
+                		"senha": "12345678tyjhnh"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoidGVzdGUyMGFAZ21haWwuY29tIiwiaWF0IjoxNzU4NjQ4MTg4LCJleHAiOjE3NTg2NDk5ODh9.4o6BkuXBl0s6bbtnYkuab82FA3lvq48xZLe0-rr-nPg
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://back-end-tcc-gamma.vercel.app/usuarios
+            name: read com senha criptografada
+            meta:
+              id: req_1068f90a612b4f45ab08409ed07426ba
+              created: 1758657093936
+              modified: 1758657710785
+              isPrivate: false
+              description: ""
+              sortKey: -1756299511226
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ0ZXN0ZTUwQGdtYWlsLmNvbSIsImlhdCI6MTc1ODY1NzUwNSwiZXhwIjoxNzU4NjU5MzA1fQ.IiEV8dtLkp-Xjsp5mt5ES67j9OLTTpYI47Sdo0BBojc
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://back-end-tcc-gamma.vercel.app/logado
+            name: post logado
+            meta:
+              id: req_579da5597d14447caac9e30c58409269
+              created: 1758657093937
+              modified: 1758657771125
+              isPrivate: false
+              description: ""
+              sortKey: -1757418820890
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                	{
+                			"email": "teste50@gmail.com",
+                		"senha": "12345678tyjhnh"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ0ZXN0ZTUwQGdtYWlsLmNvbSIsImlhdCI6MTc1ODY1NzUwNSwiZXhwIjoxNzU4NjU5MzA1fQ.IiEV8dtLkp-Xjsp5mt5ES67j9OLTTpYI47Sdo0BBojc
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Produtos
+        meta:
+          id: fld_a840e7a0ece84f41b58b5d3ed3fc906e
+          created: 1759336610571
+          modified: 1759336610571
+          sortKey: -1759336610571
+          description: ""
+        children:
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/produto
+            name: read produtos
+            meta:
+              id: req_cc0db8302720405aa4e7c421b46a3033
+              created: 1759336613870
+              modified: 1761766497771
+              isPrivate: false
+              description: ""
+              sortKey: -1759336613870
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/produto
+            name: create produtos
+            meta:
+              id: req_d89a22fe0f294943a94a81ebf7e6b921
+              created: 1759336617066
+              modified: 1761766508837
+              isPrivate: false
+              description: ""
+              sortKey: -1759336617066
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"nome": "dsadsa",
+                		"descricao": "ALOUU",
+                		"preco": 30,
+                		"imagem": "dsadsadsadsadsa.png",
+                		"categoria": "gato"
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: ""
+            name: update produtos
+            meta:
+              id: req_950a71e1c93f411aa9fe8d0d254f30b9
+              created: 1759336618402
+              modified: 1761766517803
+              isPrivate: false
+              description: ""
+              sortKey: -1759336618402
+            method: PATCH
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: https://backend-tcc-petshop-petgato-2025.vercel.app/produto/1
+            name: delete produtos
+            meta:
+              id: req_2a697b2536f04716abd9a37ff84e24af
+              created: 1759336619746
+              modified: 1761766537608
+              isPrivate: false
+              description: ""
+              sortKey: -1759336619746
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5f52314e1b9f8cd5f8e96fbb8490c82be22d1a4f
+    created: 1746555930699
+    modified: 1746555930699
+environments:
+  name: Base Environment
+  meta:
+    id: env_5f52314e1b9f8cd5f8e96fbb8490c82be22d1a4f
+    created: 1746555930691
+    modified: 1746555930691
+    isPrivate: false
