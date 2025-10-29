@@ -75,6 +75,7 @@ datasource db {
 ```bash
 npm i -g vercel@latest
 vercel link
+vercel env pull .env
 vercel
 vercel --prod
 ```
